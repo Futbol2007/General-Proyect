@@ -1,7 +1,12 @@
 import { useTextos } from "./hooks/useTextos.js";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 import { useEffect, useState } from "react";
+import ContadorClics from "./components/contadorClics.jsx";
+import Cronometro from "./components/cronometro.jsx";
+import RecordarNombre from "./components/RecordarNombre.jsx";
+import PersonajeApi from "./components/PersonajeApi.jsx";
+import NavegadorPersonajes from "./components/NavegadorPersonajes.jsx";
 
 function leerSeccion() {
   return window.location.hash.slice(1) || "inicio";
@@ -51,8 +56,7 @@ function App() {
   }
 
   return (
-    <>
-      <Navbar
+    /*<Navbar
         {...datos}
         idioma={idioma}
         cambiarIdioma={setIdioma}
@@ -77,6 +81,13 @@ function App() {
             : "Este ejemplo carga los textos del menu desde la API"}
         </p>
       </main>
+    </>*/
+    <>
+      <ContadorClics />
+      <Cronometro/>
+      <RecordarNombre />
+      <PersonajeApi />
+      <NavegadorPersonajes />
     </>
   );
 }
